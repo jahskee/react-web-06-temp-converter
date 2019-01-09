@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch } from "react-router";
 import { NavLink } from "react-router-dom";
-import './App.css';
+import './App.scss';
 
 import TeacherPage from "./components/screens/teacher-page/TeacherPage";
 import StudentPage from "./components/screens/student-page/StudentPage";

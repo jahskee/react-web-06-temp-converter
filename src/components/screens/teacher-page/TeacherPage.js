@@ -5,7 +5,7 @@ import Compute from "../../utils/Compute";
 import { withRouter } from "react-router-dom";
 import * as _actions from "../../redux/actions/actions";
 
-import "./zstyles.css";
+import "./zstyles.scss";
 class TeacherPage extends Component {
   state = {
     fromTemp: "Celsius",

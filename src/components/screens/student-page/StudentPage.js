@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import * as _actions from "../../redux/actions/actions";
 
-import "./zstyles.css";
+import "./zstyles.scss";
 class StudentPage extends Component {
   state = {
     submitted: false

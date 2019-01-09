@@ -1,68 +1,82 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Temperature Converter Test 
 
-## Available Scripts
+###1 To view the live Site:
 
-In the project directory, you can run:
+http://www.kickstartapps.us/
 
-### `npm start`
+###2. Setup and get code from github
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+cd ~
+git clone git@github.com:jahskee/temp-converter.git flexion
+cd flexion
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+npm install
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+###3. Enable Sass in React
 
-### `npm run build`
+npm install sass-loader node-sass --save-dev
+npm run eject
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Copy the file from ~/flexion/react-script/webpack.config.dev.js to
+~/flexion/node_modules/react-script/webpack.config.dev.js
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+###4. Run the Temperature Converter Test app
 
-### `npm run eject`
+npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+##II. Project Detail
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Technologies used: redux-thunk
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+##II. CI/CD Strategy
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I have experience with TravisCI and Jenkins automated deployments to test servers. Production deployment are manually run from a stable code version. CI Servers triggers other events and runs scripts such as Webpack, Grunt, Karma, Headless Chrome, Jasmine, Jest, Maven to do autmomated linting, prettier, build and test. When the build is error free, then it will be deployed to Test Server for QA Engineers to process. Afterwards, the user client will do the acceptance test and once accepted it will ready for Production release. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+Server auto-scaling in production:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+In most cases during production deployment front-end and back-end web servers  are packed in multiple copies called containers via Docker. wThe image container is stored on registries such as DockerHub and Amazon ECR. These container images can be deployed and auto-scaled to Kubernetes, Docker Swarm, OpenShift or Amazon ECS. Other notable deployment technologies are AWS CodeDeploy and Lambda Functions.  
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+###1. TravisCI 
 
-### Making a Progressive Web App
+It is a cloud solution and easy to setup with GitHub, by just adding .travis.yml file in the project root directory.  It works well with various cloud platforms for deployments. Likewise, can trigger different scripts to run right after code checkin. It can execute AWS CLI, Google Cloud CLI to deploy to the cloud.   
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
+Integrate with Karma or Headless Chrome and runs eslinter, prettier, maven, AWS CLI, Google Cloud CLI and various others. 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Please see example TravisCI configuration (.travis.yml at the root of project directory)
 
-### Deployment
+language: node_js
+sudo: false
+node_js:
+  - "8.11"
+before_script: 
+  - npm install --save-dev yarn
+  - yarn add --dev jest
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+branches:
+   only:
+   - master
 
-### `npm run build` fails to minify
+install:  
+  - yarn install
+ 
+script:
+  - yarn test
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+deploy:
+
+
+###2. Jenkins
+
+It is ideal for on-premise or private network CI/CD; likewise, it has the capability to run script and deploy code or applications to various Cloud test servers. Usually configured to run every 45 mins on schedule by default.  It is a traditional tool for CI/CD, however, it's features are catching up with latest tools.
+
+
+###.3 Sonar / SonarQube
+
+Can auto generate complex analysis and reports about the current quality of te code, such as code smell, test coverage and various others. 
