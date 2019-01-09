@@ -20,8 +20,8 @@ http://www.kickstartapps.us
   npm install sass-loader node-sass --save-dev
   npm run eject
 
-Copy the file from ~/flexion/react-script/webpack.config.dev.js to
-~/flexion/node_modules/react-script/webpack.config.dev.js
+   Copy ~/flexion/react-script/webpack.config.dev.js to
+   ~/flexion/node_modules/react-script/webpack.config.dev.js
 
 
 ### 4. Run the Temperature Converter Test app
@@ -31,8 +31,11 @@ Copy the file from ~/flexion/react-script/webpack.config.dev.js to
 
 
 ## II. CI/CD Strategy
-
-I have experience with TravisCI and Jenkins automated deployments to test servers. Production deployment are manually run from a stable code version. CI Servers triggers other events and runs scripts such as Webpack, Grunt, Karma, Headless Chrome, Jasmine, Jest, Maven to do autmomated linting, prettier, build and test. When the build is error free, then it will be deployed to Test Server for QA Engineers to process. Afterwards, the user client will do the acceptance test and once accepted it will ready for Production release. 
+ 
+  I have experience with TravisCI and Jenkins automated deployments to test servers. Production deployment are manually run     from a stable code version. CI Servers triggers other events and runs scripts such as Webpack, Grunt, Karma, Headless   
+  Chrome, Jasmine, Jest, Maven to do autmomated linting, prettier, build and test. When the build is error free, then it will 
+  be deployed to Test Server for QA Engineers to process. Afterwards, the user client will do the acceptance test and once 
+  accepted it will ready for Production release. 
 
 
 ### Server auto-scaling in production:
