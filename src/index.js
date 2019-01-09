@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { BrowserRouter, Router } from "react-router-dom";
+import { Router } from "react-router-dom";
 
 import store from "./components/redux/store/store";
 
@@ -14,10 +14,8 @@ window.jsview = JSON.stringify;
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={history}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+    <Router history={history}>     
+        <App />    
     </Router>
   </Provider>,
   document.getElementById("root")
