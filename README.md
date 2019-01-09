@@ -16,7 +16,7 @@ http://www.kickstartapps.us
   npm install
 
 
-### 3. Enable Sass in React
+### - Enable Sass in React
 
   npm install sass-loader node-sass --save-dev
   npm run eject
@@ -25,7 +25,7 @@ http://www.kickstartapps.us
    ~/flexion/node_modules/react-script/webpack.config.dev.js
 
 
-### 4. Run the Temperature Converter Test app
+### - Run the Temperature Converter Test app
 
   npm start
 
