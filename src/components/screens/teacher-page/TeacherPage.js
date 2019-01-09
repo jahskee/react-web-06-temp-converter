@@ -5,7 +5,7 @@ import Compute from "../../utils/Compute";
 import { withRouter } from "react-router-dom";
 import * as _actions from "../../redux/actions/actions";
 
-import "./zstyles.scss";
+import "./zstyles.css";
 class TeacherPage extends Component {
   state = {
     fromTemp: "Celsius",
@@ -106,7 +106,7 @@ class TeacherPage extends Component {
             </form>
           </div>
           <div className="data-grid">
-            <h3>Exam Entries</h3>
+            <h3>Test Entries</h3>
             <table className="table1" cellSpacing="0" cellPadding="0">
               <thead>
                 <tr>

@@ -1,0 +1,48 @@
+h2 {
+    text-align: left;
+    border-bottom: 2px solid green;
+  }
+  .main-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .main-panel form {
+    border: 1px solid lightgray;
+    padding: 20px 10px;
+  }
+  .main-panel form label {
+    width: 200px;
+  }
+  .main-panel form .field {
+    display: inline-block;
+    padding: 10px 0 0 10px;
+  }
+  .main-panel form input {
+    margin: 10px 20px;
+  }
+  .main-panel form input[name="input-value"] {
+    border: 1px solid green;
+    text-align: center;
+  }
+  .main-panel form select {
+    margin: 10px 20px;
+    width: 100px;
+  }
+  .main-panel .data-grid {
+    margin-left: 20px;
+  }
+  .table1 {
+    margin: 10px;
+  }
+  .table1 tr {
+    border: 1px solid lightgray;
+  }
+  .table1 td {
+    border: 1px solid lightgray;
+    padding: 5px 10px;
+  }
+  thead {
+    border: 2px solid green;
+  }
+  
