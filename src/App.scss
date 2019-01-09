@@ -31,15 +31,15 @@
   }
 }
 
-
-input[type='submit'], button {
+input[type="submit"],
+button {
   height: 35px;
   padding: 10px;
   font-weight: bold;
   margin-top: 20px;
 }
 
-input[type='text']{
+input[type="text"] {
   height: 25px;
   text-align: center;
   margin: 0;
@@ -47,13 +47,12 @@ input[type='text']{
 
 thead {
   font-weight: bold;
- 
 }
 
-.error-msg{
+.error-msg {
   color: red;
 }
 
-.success-msg{
+.success-msg {
   color: green;
 }

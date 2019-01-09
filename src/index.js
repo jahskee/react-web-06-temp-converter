@@ -14,8 +14,8 @@ window.jsview = JSON.stringify;
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={history}>     
-        <App />    
+    <Router history={history}>
+      <App />
     </Router>
   </Provider>,
   document.getElementById("root")
