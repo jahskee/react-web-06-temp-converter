@@ -3,11 +3,11 @@
 
 ## I. Setup for Development
 
-### 1 To view the live Site:
+### - To view the live Site:
 
 http://www.kickstartapps.us
 
-### 2.Get code from github
+### - Get code from github
 
   cd ~
   git clone git@github.com:jahskee/temp-converter.git flexion
