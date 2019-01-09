@@ -10,7 +10,9 @@ http://www.kickstartapps.us
 ### - Get code from github
 
   cd ~
+  
   git clone git@github.com:jahskee/temp-converter.git flexion
+  
   cd flexion
 
   npm install
