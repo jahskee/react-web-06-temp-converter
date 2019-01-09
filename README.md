@@ -92,8 +92,12 @@ Can auto generate complex analysis and reports about the current quality of te c
 
 
 
+
 Thanks for reviewing my work.
 
 
+
+
 Sincerely yours,
+
 Jaizon Lubaton
