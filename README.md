@@ -1,5 +1,6 @@
 # Temperature Converter Test 
 
+
 ## I. Project Detail
 
 ### 1 To view the live Site:
@@ -31,11 +32,9 @@ http://www.kickstartapps.us
 
 
 ## II. CI/CD Strategy
- 
-  I have experience with TravisCI and Jenkins automated deployments to test servers. Production deployment are manually run     from a stable code version. CI Servers triggers other events and runs scripts such as Webpack, Grunt, Karma, Headless   
-  Chrome, Jasmine, Jest, Maven to do autmomated linting, prettier, build and test. When the build is error free, then it will 
-  be deployed to Test Server for QA Engineers to process. Afterwards, the user client will do the acceptance test and once 
-  accepted it will ready for Production release. 
+
+I have experience with TravisCI and Jenkins automated deployment to test servers. Production deployment is done manually   from a stable branch or code version. CI Servers triggers other events and runs scripts such as Webpack, Grunt, Karma, 
+Headless Chrome, Jasmine, Jest, Maven to do autmomated linting, prettier, build and test. When the build is error free, then it will be deployed to Test Server for QA Engineers to process. Afterwards, the user client will do the acceptance test and once accepted it will ready for Production release. 
 
 
 ### Server auto-scaling in production:
