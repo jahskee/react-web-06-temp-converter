@@ -1,8 +1,8 @@
-Temperature Converter Test 
+# Temperature Converter Test 
 
-1 To view the live Site: http://www.kickstartapps.us
+### 1 To view the live Site: http://www.kickstartapps.us
 
-2. Setup and get code from github
+### 2. Setup and get code from github
 
   cd ~
   git clone git@github.com:jahskee/temp-converter.git flexion
