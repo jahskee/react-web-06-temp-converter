@@ -19,6 +19,7 @@ http://www.kickstartapps.us
 ### - Enable Sass in React
 
   npm install sass-loader node-sass --save-dev
+  
   npm run eject
 
    Copy ~/flexion/react-script/webpack.config.dev.js to
