@@ -5,7 +5,7 @@
 
 ## I. Setup for Development
 
-### - To view the live Site:
+### - View live site:
 
 http://www.kickstartapps.us
 
@@ -49,7 +49,7 @@ In most cases during production deployment front-end and back-end web servers  a
 
 ## III. TravisCI 
 
-It is a cloud solution and easy to setup with GitHub, by just adding .travis.yml file in the project root directory.  It works well with various cloud platforms for deployments. Likewise, can trigger different scripts to run right after code checkin. It can execute AWS CLI, Google Cloud CLI to deploy to the cloud.   
+A cloud solution and easy to setup with GitHub, by just adding .travis.yml file in the project root directory.  It works well with various cloud platforms for deployments. Likewise, can trigger different scripts to run right after code checkin. It can execute AWS CLI, Google Cloud CLI to deploy to the cloud.   
 
 
 Integrate with Karma or Headless Chrome and runs eslinter, prettier, maven, AWS CLI, Google Cloud CLI and various others. 
