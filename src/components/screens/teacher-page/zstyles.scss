@@ -1,0 +1,55 @@
+h2 {
+  text-align: left;
+  border-bottom: 2px solid green;
+}
+
+.main-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .entry-form {
+  }
+  form {
+    border: 1px solid lightgray;
+   // width: 300px;
+    padding: 20px 10px;
+    label {
+      width: 200px;
+    }
+    .field {
+      display: inline-block;
+      padding: 10px 0 0 10px;
+    }
+
+    input {
+      margin: 10px 20px;
+    }
+    input[name="input-value"] {
+      border: 1px solid green;
+      text-align: center;
+    }
+    select {
+      margin: 10px 20px;
+      width: 100px;
+    }
+  }
+
+  .data-grid {
+    margin-left: 20px;
+  }
+}
+
+.table1 {
+  margin: 10px;
+  tr {
+    border: 1px solid lightgray;
+  }
+  td {
+    border: 1px solid lightgray;
+    padding: 5px 10px;
+  }
+}
+
+thead {
+  border: 2px solid green;
+}
