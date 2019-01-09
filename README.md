@@ -51,7 +51,7 @@ It is a cloud solution and easy to setup with GitHub, by just adding .travis.yml
 Integrate with Karma or Headless Chrome and runs eslinter, prettier, maven, AWS CLI, Google Cloud CLI and various others. 
 
 Please see example TravisCI configuration (.travis.yml at the root of project directory)
-
+--------------------------
 language: node_js
 sudo: false
 node_js:
@@ -84,7 +84,7 @@ Can auto generate complex analysis and reports about the current quality of te c
 
 
 
-Thank you for reviewing.
+Thanks for reviewing my work.
 
 
 Sincerely yours,
