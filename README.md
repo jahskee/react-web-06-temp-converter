@@ -38,18 +38,17 @@ http://www.kickstartapps.us
 
 ## II. CI/CD Strategy
 
-I have experience with TravisCI and Jenkins automated deployment to test servers. Production deployment is done manually   from a stable branch or code version. CI Servers triggers other events and runs scripts such as Webpack, Grunt, Karma, 
-Headless Chrome, Jasmine, Jest, Maven to do autmomated linting, prettier, build and test. When the build is error free, then it will be deployed to Test Server for QA Engineers to process. Afterwards, the user client will do the acceptance test and once accepted it will ready for Production release. 
+I have experience with TravisCI and Jenkins, it does automated deployment to test servers. Production deployment is done manually  from a stable branch or code version. CI Servers trigger other events and can run many scripts such as Webpack, Grunt, Karma, Headless Chrome, Jasmine, Jest, Maven; likewise it does autmomated linting, prettier, build and test. When the build is successful, it will then deploy to Test Server. Now QA support will do functional testing. Afterwards, the user client will do the acceptance test and once accepted it will be in the next Production release. 
 
 
 ### Server auto-scaling in production:
 
-In most cases during production deployment front-end and back-end web servers  are packed in multiple copies called containers via Docker. wThe image container is stored on registries such as DockerHub and Amazon ECR. These container images can be deployed and auto-scaled to Kubernetes, Docker Swarm, OpenShift or Amazon ECS. Other notable deployment technologies are AWS CodeDeploy and Lambda Functions.  
+In most cases during production deployment front-end and back-end web servers runs in multiple copies via Docker container. The image containers are saved on registries such as DockerHub and Amazon ECR. These container images can be deployed and auto-scaled to Kubernetes, Docker Swarm, OpenShift or Amazon ECS. Other notable deployment technologies are AWS CodeDeploy and AWS Lambda Functions.  
 
 
 ## III. TravisCI 
 
-A cloud solution and easy to setup with GitHub, by just adding .travis.yml file in the project root directory.  It works well with various cloud platforms for deployments. Likewise, can trigger different scripts to run right after code checkin. It can execute AWS CLI, Google Cloud CLI to deploy to the cloud.   
+A cloud solution that is easy to setup with GitHub, simply by adding .travis.yml file in the project root directory.  It works well with various cloud platforms for deployments. Likewise, can trigger different scripts to run right after code checkin. It can execute AWS CLI, Google Cloud CLI and many other scripts for cloud deployment.   
 
 
 Integrate with Karma or Headless Chrome and runs eslinter, prettier, maven, AWS CLI, Google Cloud CLI and various others. 
@@ -59,12 +58,18 @@ Please see example TravisCI configuration (.travis.yml at the root of project di
 ----------.travis.yml----------------
 
 language: node_js
+
 sudo: false
+
 node_js:
   - "8.11"
+
 before_script: 
-  - npm install --save-dev yarn
-  - yarn add --dev jest
+
+- npm install --save-dev yarn
+
+- yarn add --dev jest
+
 
 branches:
    only:
@@ -83,7 +88,7 @@ deploy:
 
 ## V. Jenkins
 
-It is ideal for on-premise or private network CI/CD; likewise, it has the capability to run script and deploy code or applications to various Cloud test servers. Usually configured to run every 45 mins on schedule by default.  It is a traditional tool for CI/CD, however, it's features are catching up with latest tools.
+Jenkins has been around for many years, and is ideal for on-premise or private network CI/CD; moreover, it has the capability to run script and deploy code or applications to various Cloud test servers. Usually configured to run every 45 mins on schedule by default. It is a traditional tool for CI/CD, however, new features are added to catch up with latest strategies and tools.
 
 
 ## V. Sonar / SonarQube
